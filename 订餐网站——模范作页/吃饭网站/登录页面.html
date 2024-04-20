@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('背景.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 a {
+            float: left;
+            text-decoration: none;
+        }
+
+        h1 span.first {
+            color: rosybrown;
+            font-style: italic;
+            font-family: Arial, serif;
+            font-size: 60px;
+        }
+
+        h1 span.second {
+            color: white;
+            font-size: 35px;
+            font-style: italic;
+            font-family: Arial, serif;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.5);
+        }
+        input {
+            border-radius: 5px;
+            border: lightgrey 1px solid;
+            font-size: 7px;
+            height: 40px;
+            width: 348px;
+            /*先设定一个值，在通过页面检查按住width一直加减：上下箭头直到边框突然回缩*/
+        }
+
+            input[type="checkbox"] {
+                border-radius: 5px;
+                border: lightgrey 1px solid;
+                height: 15px;
+                width: 15px;
+            }
+
+        button[type="submit"] {
+            border: lightgrey 1px solid;
+            border-radius: 5px;
+            height: 50px;
+            width: 175px;
+            background-color:blanchedalmond;
+            text-align: center;
+            /*设置字距*/
+            letter-spacing: 2px;
+            /*移入按钮后变成小手形式*/
+            cursor: pointer;
+        }
+        button[type="reset"] {
+            border: lightgrey 1px solid;
+            border-radius: 5px;
+            height: 50px;
+            width: 175px;
+            background-color: antiquewhite;
+            text-align: center;
+            /*设置字距*/
+            letter-spacing: 2px;
+            /*移入按钮后变成小手形式*/
+            cursor: pointer;
+        }
+    </style>
+    <title>weeat</title>
+</head>
+<body>
+    <h1><a href="file:///C:/Users/86131/Desktop/html/%E8%AE%A2%E9%A4%90%E7%B3%BB%E7%BB%9F.html" title="网站主页"><span class="first">WE</span><span class="second"> eat</span></a></h1>
+    <br />
+    <br />
+    <br />
+    <hr />
+    <div class="center">
+        <form action="#" method="post">
+
+            <h2>登录</h2>
+            <br />
+            <br />
+            用户名：<input type="text" placeholder="请输入用户名/手机号">
+            <br />
+            <br />
+            密&emsp;码：<input type="text" placeholder="输入密码">
+            <br />
+            <br />
+            <button type="submit">登录</button>
+            <button type="reset">重置</button>
+            <p><a href=".html">还没有账号，注册一个</a></p>
+
+        </form>
+    </div>
+
+</body>
+</html>
