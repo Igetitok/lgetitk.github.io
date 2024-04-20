@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/c2.css" />
+    <script src="./lib/jquery.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/lib/template-web.js"></script>
+    <title>短剑-武器-艾尔登法环图鉴</title>
+    <!-- //设置获取图书列表模版 -->
+    <script type="text/html" id="teml-booklist">
+      {{each data}}
+      <tr>
+        <td style="display:none">{{$value.id}}</td>
+        <td>{{$value.bookname}}</td>
+        <td>{{$value.author}}</td>
+        <td>{{$value.publisher}}</td>
+        <td>{{$value.booktype}}</td>
+        <td>{{$value.isbn}}</td>
+        <td><a href="#" class="aUpdate" data-id="{{$value.id}}">购买</a></td>
+      </tr>
+      {{/each}}
+    </script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <a href="./index.html"
+        ><img
+          class="logoimg"
+          src="./pictures/logo.png"
+          style="width: 45px; height: 45px; position: absolute; left: 10px"
+          alt="艾尔登法环logo"
+      /></a>
+
+      <h1
+        style="
+          color: goldenrod;
+          position: relative;
+          left: -520px;
+          font-size: xx-large;
+        "
+      >
+        <a
+          href="./index.html"
+          style="
+            color: rgb(255, 210, 97);
+            font-family: 'Courier New', Courier, monospace;
+          "
+          >艾尔登法环图鉴</a
+        >
+      </h1>
+    </div>
+
+    <div class="topnav">
+      <ul class="navContainer">
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">武器</a>
+          <div class="dropdown-content">
+            <a href="./01_Dagger.html">短剑</a>
+            <a href="./02_StraightSword.html">直剑</a>
+            <a href="#">大剑</a>
+            <a href="#">特大剑</a>
+            <a href="#">刺剑</a>
+            <a href="#">重刺剑</a>
+            <a href="#">刀</a>
+            <a href="#">曲剑</a>
+            <a href="#">大曲剑</a>
+            <a href="#">双头剑</a>
+            <a href="#">斧</a>
+            <a href="#">大斧</a>
+            <a href="#">连枷</a>
+            <a href="#">槌</a>
+            <a href="#">大槌</a>
+            <a href="#">特大武器</a>
+            <a href="#">矛/大矛/戟</a>
+            <a href="#">鞭/镰刀/火把</a>
+            <a href="#">拳套/钩爪</a>
+            <a href="#">弓/弩</a>
+            <a href="#">盾牌</a>
+            <a href="#">法杖</a>
+            <a href="#">印记</a>
+          </div>
+        </li>
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">战灰</a>
+          <div class="dropdown-content">
+            <a href="#">神秘</a>
+            <a href="#">普通</a>
+            <a href="#">锋利</a>
+            <a href="#">优质</a>
+            <a href="#">厚重</a>
+            <a href="#">魔力</a>
+            <a href="#">雷电</a>
+            <a href="#">血</a>
+            <a href="#">毒</a>
+            <a href="#">寒冷</a>
+            <a href="#">火焰</a>
+            <a href="#">神圣</a>
+          </div>
+        </li>
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">祷告</a>
+          <div class="dropdown-content">
+            <a href="#">传说</a>
+            <a href="#">癫火</a>
+            <a href="#">火焰</a>
+            <a href="#">雷电</a>
+            <a href="#">毒</a>
+            <a href="#">黄金</a>
+            <a href="#">双指</a>
+            <a href="#">野兽</a>
+            <a href="#">腐败</a>
+            <a href="#">神皮</a>
+            <a href="#">鲜血君王</a>
+            <a href="#">龙飨</a>
+          </div>
+        </li>
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">魔法</a>
+          <div class="dropdown-content">
+            <a href="#">传说</a>
+            <a href="#">寒冷</a>
+            <a href="#">辉石</a>
+            <a href="#">王室</a>
+            <a href="#">结晶</a>
+            <a href="#">瑟利亚</a>
+            <a href="#">重力</a>
+            <a href="#">死术</a>
+            <a href="#">格密尔</a>
+            <a href="#">异端</a>
+          </div>
+        </li>
+
+        <li class="navli dropdown idleee"><a href=""></a></li>
+        <!-- <li class="navli">
+          <a href="./04book.html" target="_blank">管理</a>
+        </li> -->
+        <li class="navli dropdown">
+          <a href="./login.html" style="float: right">登录</a>
+        </li>
+        <li class="navli dropdown">
+          <a href="./register.html" style="float: right">注册</a>
+        </li>
+        <li class="navli dropdown">
+          <a href="./logout.html" id="logoutID">注销</a>
+        </li>
+      </ul>
+    </div>
+    <div class="subhead">
+      <h1>武器-短剑</h1>
+    </div>
+    <div class="row">
+      <div class="leftcolumn">
+        <ul class="menuul">
+          <li><a href="#Dagger">匕首</a></li>
+          <li><a href="#ParryingDagger">格挡匕首</a></li>
+          <li><a href="#Mesericorde">慈悲短剑</a></li>
+          <li><a href="javascript:void">单刃小刀</a></li>
+          <li><a href="javascript:void">染血短刀</a></li>
+          <li><a href="javascript:void">黄铜短刀</a></li>
+          <li><a href="javascript:void">胁差</a></li>
+          <li><a href="javascript:void">庆典小镰刀</a></li>
+          <li><a href="javascript:void">象牙小镰刀</a></li>
+          <li><a href="javascript:void">结晶小刀</a></li>
+          <li><a href="javascript:void">蝎尾针</a></li>
+          <li><a href="javascript:void">五指剑</a></li>
+          <li><a href="javascript:void">辉石克力士</a></li>
+          <li><a href="javascript:void">逆刺</a></li>
+          <li><a href="javascript:void">使命短刀</a></li>
+          <li><a href="javascript:void">黑刀</a></li>
+        </ul>
+      </div>
+      <div class="rightcolumn">
+        <!-- 匕首 -->
+        <a name="Dagger"></a>
+        <hr align="left" width="1170" color="goldenrod" size="5" />
+        <h2>匕首</h2>
+        <img src="./pictures/160px-匕首.png" alt="匕首" style="float: right" />
+        <h3>简介</h3>
+        <p>剑身短小又笔直的短剑。</p>
+        <br />
+        <p>攻击力与攻击距离较为弱势，但因为重量轻，能使出快速连击。</p>
+        <br />
+        <p>使出致命一击的威力表现不错。</p>
+        <h3>获取地点</h3>
+        <p>狭间之地各地域的君王军小兵（匕首）概率掉落/大赐福铃珠商人购买</p>
+        <h3>专属战技</h3>
+        <p>无专属战技</p>
+        <h3>武器使用强化石类型</h3>
+        <p>锻造石</p>
+        <!-- 格挡匕首 -->
+        <a name="ParryingDagger"></a>
+        <hr align="left" width="1170" color="goldenrod" size="5" />
+        <h2>格挡匕首</h2>
+        <img
+          src="./pictures/160px-格挡匕首.png"
+          alt="格挡匕首"
+          style="float: right"
+        />
+        <h3>简介</h3>
+        <p>具有独特弯曲护手的短剑。</p>
+        <br />
+        <p>格挡攻击用的武器。</p>
+        <br />
+        <p>看穿敌人的攻势，见招拆招── 专家只要有这把武器就能体现。</p>
+        <h3>获取地点</h3>
+        <p>宁姆格福-蒙流洞窟-帕奇购买</p>
+        <h3>专属战技</h3>
+        <p>无专属战技</p>
+        <h3>武器使用强化石类型</h3>
+        <p>锻造石</p>
+        <!-- 慈悲短剑 -->
+        <a name="Mesericorde"></a>
+        <hr align="left" width="1170" color="goldenrod" size="5" />
+        <h2>慈悲短剑</h2>
+        <img
+          src="./pictures/160px-慈悲短剑.png"
+          alt="慈悲短剑"
+          style="float: right"
+        />
+        <h3>简介</h3>
+        <p>白衣的战场医师们使用的短剑。</p>
+        <br />
+        <p>具有坚硬、锋利的突刺剑身， 致命一击的表现特别亮眼。</p>
+        <br />
+        <p>
+          医疗以慈悲为本── 在战场上，慈悲为使人解脱之举。
+          医师们也因此化为令人畏惧的杀手。
+        </p>
+        <h3>获取地点</h3>
+        <p>
+          史东薇尔-有只接肢贵族后裔的大厅-面向升降梯，向右边走-需要石剑钥匙打开的房间内
+        </p>
+        <h3>专属战技</h3>
+        <p>无专属战技</p>
+        <h3>武器使用强化石类型</h3>
+        <p>锻造石</p>
+      </div>
+    </div>
+  </body>
+</html>

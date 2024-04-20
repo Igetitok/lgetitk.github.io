@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.navContainer {
+    width:100%;
+    position: relative;    
+    background-color:blue;
+    color:white;
+    font-size: 20px;
+    text-align: center;
+}
+.subContainer {
+    display: inline;
+}
+.submenu {
+    display: none;
+}
+
+
+
+
+.dropdown-contentul {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contentul a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-contentul a:hover {background-color: #f1f1f1;}
+
+.dropdowndiv:hover .dropdown-contentul {
+  display: block;
+}
+
+.dropbtndiv {
+  background-color: blue;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowndiv {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-contentul {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-contentul a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropbtn:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+
+<body>
+
+<div class='navContainer dropdowndiv'>    
+    <div class='subContainer dropbtndiv'>
+        图书列表
+        <ul class='submenu dropdown-contentul'>
+            <a href="">link1</a>
+            <a href="">link2</a>
+            <a href="">link3</a>
+        </ul>
+    </div>
+    <div class='subContainer'>
+            作者列表
+    </div>
+</div>
+
+
+<br><br>
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Left</button>
+  <div class="dropdown-content" style="left:0;">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+<div class="dropdown" style="float:right;">
+  <button class="dropbtn">Right</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+
+</body>
+</html>

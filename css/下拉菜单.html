@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.Tit {
+    background-color: blue;
+    font-size: 25px;
+    color:white;
+    margin:0;
+    padding: 13px;
+    text-align: center;
+}
+ul.navContainer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
+  font-size: 20px;
+}
+
+li.navli {
+  float: left;
+}
+.idleee {
+    padding:0 270px;
+}
+li.navli>a, li.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown a:hover, li.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 111px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size:14px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<p class="Tit">图书管理系统</p>
+<ul class='navContainer'>
+  <li class='navli'><a href="#home">Home</a></li>
+  <li class="navli dropdown">
+        <a href="javascript:void(0)" class="dropbtn">图书列表</a>
+        <div class="dropdown-content">
+          <a href="#">图书查询</a>
+          <a href="#">购买图书</a>
+          <a href="#">Lin康</a>
+        </div>
+  </li>
+  <li class="navli dropdown">
+        <a href="javascript:void(0)" class="dropbtn">作者列表</a>
+        <div class="dropdown-content">
+          <a href="#">图书查询</a>
+          <a href="#">购买图书</a>
+          <a href="#">Lin康</a>
+        </div>
+  </li>
+  <li class="navli dropdown">
+    <a href="javascript:void(0)" class="dropbtn">购物信息</a>
+    <div class="dropdown-content">
+      <a href="#">购物车</a>
+      <a href="#">清空购物车</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li class="navli dropdown idleee"><a href=""></a></li>
+
+  <li class="navli dropdown">
+        <a href="./login.html" style="float:right">登录</a>
+  </li>
+  <li class="navli dropdown">
+        <a href="./reguser.html" style="float:right" >注册</a>
+  </li>
+  <li class="navli dropdown">
+        <a href="./logout.html"">注销</a>
+  </li>
+</ul>
+
+<p>
+    <div>
+        
+    </div>
+    <div>
+
+    </div>
+</p>
+
+</body>
+</html>

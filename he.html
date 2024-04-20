@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/c2.css" />
+    <script src="./lib/jquery.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/lib/template-web.js"></script>
+    <title>主页-艾尔登法环图鉴</title>
+    <!-- //设置获取图书列表模版 -->
+    <script type="text/html" id="teml-booklist">
+      {{each data}}
+      <tr>
+        <td style="display:none">{{$value.id}}</td>
+        <td>{{$value.bookname}}</td>
+        <td>{{$value.author}}</td>
+        <td>{{$value.publisher}}</td>
+        <td>{{$value.booktype}}</td>
+        <td>{{$value.isbn}}</td>
+        <td><a href="#" class="aUpdate" data-id="{{$value.id}}">购买</a></td>
+      </tr>
+      {{/each}}
+    </script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        class="logoimg"
+        src="./pictures/logo.png"
+        style="width: 45px; height: 45px; position: absolute; left: 10px"
+        alt="艾尔登法环logo"
+      />
+
+      <h1
+        style="
+          color: goldenrod;
+          position: relative;
+          left: -520px;
+          font-size: xx-large;
+        "
+      >
+        <a
+          href="./index.html"
+          style="
+            color: rgb(255, 210, 97);
+            font-family: 'Courier New', Courier, monospace;
+          "
+          >艾尔登法环图鉴</a
+        >
+      </h1>
+    </div>
+
+    <div class="topnav">
+      <ul class="navContainer">
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">武器</a>
+          <div class="dropdown-content">
+            <a href="./01_Dagger.html">短剑</a>
+            <a href="./02_StraightSword.html">直剑</a>
+            <a href="#">大剑</a>
+            <a href="#">特大剑</a>
+            <a href="#">刺剑</a>
+            <a href="#">重刺剑</a>
+            <a href="#">刀</a>
+            <a href="#">曲剑</a>
+            <a href="#">大曲剑</a>
+            <a href="#">双头剑</a>
+            <a href="#">斧</a>
+            <a href="#">大斧</a>
+            <a href="#">连枷</a>
+            <a href="#">槌</a>
+            <a href="#">大槌</a>
+            <a href="#">特大武器</a>
+            <a href="#">矛/大矛/戟</a>
+            <a href="#">鞭/镰刀/火把</a>
+            <a href="#">拳套/钩爪</a>
+            <a href="#">弓/弩</a>
+            <a href="#">盾牌</a>
+            <a href="#">法杖</a>
+            <a href="#">印记</a>
+          </div>
+        </li>
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">战灰</a>
+          <div class="dropdown-content">
+            <a href="#">神秘</a>
+            <a href="#">普通</a>
+            <a href="#">锋利</a>
+            <a href="#">优质</a>
+            <a href="#">厚重</a>
+            <a href="#">魔力</a>
+            <a href="#">雷电</a>
+            <a href="#">血</a>
+            <a href="#">毒</a>
+            <a href="#">寒冷</a>
+            <a href="#">火焰</a>
+            <a href="#">神圣</a>
+          </div>
+        </li>
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">祷告</a>
+          <div class="dropdown-content">
+            <a href="#">传说</a>
+            <a href="#">癫火</a>
+            <a href="#">火焰</a>
+            <a href="#">雷电</a>
+            <a href="#">毒</a>
+            <a href="#">黄金</a>
+            <a href="#">双指</a>
+            <a href="#">野兽</a>
+            <a href="#">腐败</a>
+            <a href="#">神皮</a>
+            <a href="#">鲜血君王</a>
+            <a href="#">龙飨</a>
+          </div>
+        </li>
+        <li class="navli dropdown">
+          <a href="javascript:void(0)" class="dropbtn">魔法</a>
+          <div class="dropdown-content">
+            <a href="#">传说</a>
+            <a href="#">寒冷</a>
+            <a href="#">辉石</a>
+            <a href="#">王室</a>
+            <a href="#">结晶</a>
+            <a href="#">瑟利亚</a>
+            <a href="#">重力</a>
+            <a href="#">死术</a>
+            <a href="#">格密尔</a>
+            <a href="#">异端</a>
+          </div>
+        </li>
+
+        <li class="navli dropdown idleee"><a href=""></a></li>
+        <!-- <li class="navli">
+          <a href="./04book.html" target="_blank">管理</a>
+        </li> -->
+        <li class="navli dropdown">
+          <a href="./login.html" style="float: right">登录</a>
+        </li>
+        <li class="navli dropdown">
+          <a href="./register.html" style="float: right">注册</a>
+        </li>
+        <li class="navli dropdown">
+          <a href="./logout.html" id="logoutID">注销</a>
+        </li>
+      </ul>
+    </div>
+    <img src="./pictures/EldenRing.jpg" alt="艾尔登法环" style="width: 100%" />
+  </body>
+</html>
