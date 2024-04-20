@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/c2.css" />
+    <script src="./lib/jquery.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/lib/template-web.js"></script>
+    <title>APEX武器图鉴</title>
+    <!-- //设置获取图书列表模版 -->
+    <script type="text/html" id="teml-booklist">
+      {{each data}}
+      <tr>
+        <td style="display:none">{{$value.id}}</td>
+        <td>{{$value.bookname}}</td>
+        <td>{{$value.author}}</td>
+        <td>{{$value.publisher}}</td>
+        <td>{{$value.booktype}}</td>
+        <td>{{$value.isbn}}</td>
+        <td><a href="#" class="aUpdate" data-id="{{$value.id}}">购买</a></td>
+      </tr>
+      {{/each}}
+    </script>
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <ul class="menuul">
+          <li><a href="#Dagger">充能步枪</a></li>
+          <li><a href="#ParryingDagger">哈沃克步枪 </a></li>
+          <li><a href="#Mesericorde">平行步枪 </a></li>
+          <li><a href="javascript:void">赫姆洛克连发步枪</a></li>
+          <li><a href="javascript:void">R-301卡宾枪</a></li>
+          <li><a href="javascript:void">转换者冲锋枪</a></li>
+          <li><a href="javascript:void">猎兽冲锋枪</a></li>
+          <li><a href="javascript:void">R-99冲锋枪</a></li>
+          <li><a href="javascript:void">电能冲锋枪</a></li>
+          <li><a href="javascript:void">专注轻机枪</a></li>
+          <li><a href="javascript:void">喷火轻机枪 </a></li>
+          <li><a href="javascript:void">L-STAR 能量机枪</a></li>
+          <li><a href="javascript:void">暴走</a></li>
+          <li><a href="javascript:void">30-30连发枪</a></li>
+          <li><a href="javascript:void">G7侦查步枪</a></li>
+          <li><a href="javascript:void">三重狙击枪</a></li>
+          <li><a href="javascript:void">波塞克</a></li>
+          <li><a href="javascript:void">长弓狙击步枪</a></li>
+          <li><a href="javascript:void">哨兵狙击步枪</a></li>
+          <li><a href="javascript:void">辅助手枪</a></li>
+          <li><a href="javascript:void">EVA-8 自动散弹枪</a></li>
+          <li><a href="javascript:void">獒犬散弹枪</a></li>
+          <li><a href="javascript:void">和平捍卫者</a></li>
+          <li><a href="javascript:void">P2020</a></li>
+          <li><a href="javascript:void">RE-45</a></li>
+          <li><a href="javascript:void">复仇女神</a></li>
+          <li><a href="javascript:void">莫桑比克</a></li>
+        </ul>
+      </div>
+      <div class="rightcolumn">
+        <!-- 充能步枪 -->
+        <a name="Dagger"></a>
+        <hr align="left" width="1170" color="goldenrod" size="5" />
+        <h2>充能步枪</h2>
+        <img src="./img/充能步枪.png" alt="充能步枪" style="float: right"          
+        height="40%"
+        width="40%"/>
+        <h3>优点</h3>
+        <p>激光快速的造成多次3点伤害，最高造成45点伤害。加上最后一下的45点伤害，一次最多能打90点伤害</p>
+        <br />
+        <p>基本伤害很高</p>
+        <br />
+        <p>射程最远的武器</p>
+        <br />
+        <p>对腿伤害不会有缩减</p>
+        <br />
+        <p>对腿伤害不会有缩减</p>
+        <h3>缺点</h3>
+        <p>每一发射击消耗2枚子弹，意味着一次换弹只能进行4次射击</p>
+        <br />
+        <p>换弹时间长，特别是在空弹匣的时候</p>
+        <br />
+        <p>装备不了加长狙击弹匣</p>
+        <br />
+        <p>不像其他的狙击枪，这把枪的子弹不能穿透敌人</p>
+        <!-- 哈沃克步枪 -->
+        <a name="ParryingDagger"></a>
+        <hr align="left" width="1170" color="goldenrod" size="5" />
+        <h2>哈沃克步枪</h2>
+        <img
+          src="./img/哈沃克步枪.png"
+          alt="哈沃克步枪"
+          style="float: right"
+          height="40%"
+          width="40%"
+        />
+        <h3>优点</h3>
+        <p>子弹伤害高，伤害率高</p>
+        <br />
+        <p>在所有的突击步枪中有着最高的弹匣容量和最快的子弹飞行速度</p>
+        <br />
+        <p>子弹下落少</p>
+        <h3>缺点</h3>
+        <p>如果没有装配涡轮增压器的话，射击前会有一小段延迟</p>
+        <br />
+        <p>后座力不规律，很难打中远处的敌人</p>
+        <br />
+        <p>填弹速度慢</p>
+        <!-- 平行步枪 -->
+        <a name="Mesericorde"></a>
+        <hr align="left" width="1170" color="goldenrod" size="5" />
+        <h2>平行步枪</h2>
+        <img
+          src="./img/平行步枪.png"
+          alt="平行步枪"
+          style="float: right"
+          height="40%"
+          width="40%"
+        />
+        <h3>优点</h3>
+        <p>子弹伤害高</p>
+        <br />
+        <p>自带的瞄准镜也能很好应对近-中程的战斗</p>
+        <br />
+        <p>
+          腰射比较准
+        </p>
+        <h3>缺点</h3>
+        <p>
+          远距离表现不佳
+        </p>
+        <br />
+        <p>后坐力有些不好控制，特别是用了高一些的倍镜后技</p>
+        <br />
+        <p>很多皮肤的机瞄把视线挡住了</p>
+        <br />
+        <p>子弹飞行速度慢</p>
+      </div>
+    </div>
+  </body>
+</html>
